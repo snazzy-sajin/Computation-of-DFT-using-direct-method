@@ -5,40 +5,26 @@ To perform and verify DFT using direct method by SCILAB.
 ## APPARATUS REQUIRED
 PC installed with SCILAB
 ## PROGRAM 
+```
 clear;
 clc;
 x = [1, 2, 3, 4];
-
 n = 0:length(x)-1;
-
 omega = linspace(-%pi, %pi, 500);
-
 X_dtft = x * exp(-%i * n' * omega);
-
 mag = abs(X_dtft);
-
 phase = atan(imag(X_dtft), real(X_dtft));
-
 scf(0); // Open new figure
-
 subplot(2, 1, 1);
-
 plot2d(omega, mag, style=2);
-
 xtitle("Magnitude Spectrum", "Frequency (\omega)", "|X(\omega)|");
-
 xgrid();
-
 subplot(2, 1, 2);
-
 plot2d(omega, phase, style=5);
-
 xtitle("Phase Spectrum", "Frequency (\omega)", "Phase (radians)");
-
 xgrid();
 
-
-
+```
 
 <br>
 ### CALCULATIONS:
